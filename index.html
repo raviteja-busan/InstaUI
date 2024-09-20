@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Profile</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .mainn {
+        border: 1px solid black;
+        height: 485px;
+        width: 240px;
+        border-radius: 10px;
+        background-color: white;
+        /* align-items: center; */
+        /* justify-content: center; */
+      }
+      
+      .mainn:hover{
+        background-color: #141414;
+        color: #fefefe;
+      }
+      
+      .m1 {
+        border: 1px solid rgb(5, 5, 5);
+        height: 20px;
+        width: 240px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: rgb(5, 5, 5);
+        margin: -1px;
+        margin-bottom: 0px;
+      }
+      .m12 {
+        float: right;
+        margin-top: 2px;
+        margin-right: 3px;
+        color: #f7f5f5;
+      }
+      .m21 {
+        margin-top: 2px;
+        float: left;
+        margin-left: 6px;
+        color: #f7f5f5;
+      }
+      .m123 {
+        margin-top: 2px;
+        margin-right: 3px;
+        color: #f7f5f5;
+      }
+      .m211 {
+        color: #f7f5f5;
+        margin-top: 2px;
+        margin-left: 6px;
+      }
+      .m2{
+        height: 30px;
+            width: 230px;
+            /* position: relative; */
+            /* background: bisque; */
+            display: flex;
+            align-items: center;
+            /* justify-content: space-between; */
+            padding: -1px;
+      }
+      .p1{
+        display: inline;
+        /* padding-left: -10px; */
+        /* justify-content: flex-start; */
+      }
+      .d{
+        align-items: center;
+        justify-content: end;
+      }
+      .item1 { grid-area: image; }
+      .item2 { grid-area: nu1; }
+      .item3 { grid-area: nu2; }
+      .item4 { grid-area: nu3; }
+      .item5 { grid-area: posts; }
+      .item6{ grid-area: followers;}
+      .item7{ grid-area: following;}
+    
+      .m3{
+        display: grid;
+        grid-template-areas: 
+        'image nu1 nu2 nu3'
+        'image nu1 nu2 nu3'
+        'image posts followers following'
+        'image posts followers following';
+        /* background-color: #2196F3; */
+        /* gap: 10px; */
+      }
+      .it1{grid-area: mm1;}
+      .it2{grid-area: mm2;}
+      .it3{grid-area: mm3;}
+      .it4{grid-area: mm4;}
+      .it5{grid-area: mm5;}
+      .it6{grid-area: p1;}
+      .it7{grid-area: p2;}
+      .it8{grid-area: p3;}
+      .it9{grid-area: p4;}
+      .it10{grid-area: p5;}
+      .m61{
+        height: 45px;
+        display: grid;
+        grid-template-areas: 
+        'mm1 mm2 mm3 mm4 mm5'
+        'p1 p2 p3 p4 p5';
+
+      }
+       
+      /* *:hover{
+        background-color: #141414;
+        color: #fefefe;
+      }
+      *::after{
+        color: #0d0d0d;
+      } */
+      .cii{
+        height: 30px;
+        width: 30px;
+        border: 2px solid #141414 ;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(https://images.news18.com/ibnlive/uploads/2023/09/untitled-design-2023-09-02t152033.507-16936482433x2.jpg?impolicy=website&width=640&height=480);
+      }
+      .ci2{
+        height: 30px;
+        width: 30px;
+        border: 2px solid #141414 ;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(https://in.bmscdn.com/iedb/artist/images/website/poster/large/ravi-teja-1848-1647947897.jpg);
+      }
+      .ci3{
+        height: 30px;
+        width: 30px;
+        border: 2px solid #141414 ;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Charminar_sumeet_photography_3.JPG/402px-Charminar_sumeet_photography_3.JPG);
+      }
+      .ci4{
+        height: 30px;
+        width: 30px;
+        border: 2px solid #141414 ;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Avicenna_birthday_anniversary_14.jpg/300px-Avicenna_birthday_anniversary_14.jpg);
+      }
+      .ci5{
+        height: 30px;
+        width: 30px;
+        border: 2px solid #141414 ;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(https://akm-img-a-in.tosshub.com/indiatoday/images/story/202310/gujarats-heritage-special-train-flagged-off-timings-and-fare-315707383-16x9_0.jpg?VersionId=7kcfw66fBY3DmOKYK245CpBAiWawxYKp&size=690:388);
+      }
+      .ci{
+        height: 40px;
+        width: 40px;
+        border: 2px solid #cc2366 ;
+        border-radius: 50%;
+        background-position: center center;
+        background-size: cover;
+        background-image: url(https://in.bmscdn.com/iedb/artist/images/website/poster/large/ravi-teja-1848-1647947897.jpg);
+      }
+      /* .md {
+        background-color: tomato;
+        /* width: 100vw; */
+        /* height: 100vh; */
+        /* border: 2px solid transparent;
+        display: flex;
+        padding: -10px;
+        column-gap: 10px;
+        row-gap: 10px;
+        justify-content: space-evenly;
+        flex-wrap: wrap; */
+        /* overflow: scroll; */
+        /* flex-direction: column;
+            justify-content: space-between; */
+      .m5{
+        margin-top: 70px;
+        width: 240px;
+        height: 25px;
+        
+        display: flex;
+        padding: -10px;
+        column-gap: 10px;
+        row-gap: 10px;
+        align-items: center;
+        justify-content: space-evenly;
+        /* background-color: rgb(251, 251, 251); */
+      }
+      
+      .itt {
+        border: 1px solid transparent;
+        border-radius: 5px;
+        height: 16px;
+        display: center;
+        background-color: azure;
+      }
+      .itt1{
+        width: 60px ;
+        background-color: rgb(4, 176, 238);
+      }
+      .itt2{
+        width: 80px ;
+        background-color: rgb(4, 176, 238);
+      }
+      .itt3{
+        width: 20px ;
+        background-color: rgb(4, 176, 238);
+      }
+      .m6{
+        width: 240px;
+        height: 25px;
+        /* background-color: #bc1888; */
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+      }
+      .ff{
+        height: 25px;
+        
+      }
+      .fff{
+        opacity: 0.3;
+      }
+      
+      .m7{
+        border: 1px solid transparent;
+        height: 165px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow: hidden;
+      }
+      .ittt {
+        border: 1px solid;
+        height: 78px;
+        width: 78px;
+        background-color: azure;
+      }
+      .im1{
+        background-image: url(https://static.india.com/wp-content/uploads/2023/01/Ravi-Teja.jpg?impolicy=Medium_Resize&w=1200&h=800);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im2{
+        background-image: url(https://www.cinejosh.com/newsimg/newsmainimg/raviteja-has-no-plans-to-slow-down_b_1702230516.jpg);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im3{
+        background-image: url(https://www.cinejosh.com/newsimg/newsmainimg/ravi-teja_b_0412231148.jpg);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im4{
+        background-image: url(https://i.pinimg.com/736x/3a/ea/90/3aea90d745d13af4553b1326520ba7e6.jpg);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im5{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLxnPPTY3KD-r5gGBD9kqAyEjELOUVGihDHw&s);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im6{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlr0ijDlh39ff9QVqdZ7Ok0R6edTAwDNhOOg&s);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im7{
+        background-image: url(https://www.cinejosh.com/newsimg/newsmainimg/raviteja-has-no-plans-to-slow-down_b_1702230516.jpg);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im8{
+        background-image: url(https://static.india.com/wp-content/uploads/2023/01/Ravi-Teja.jpg?impolicy=Medium_Resize&w=1200&h=800);
+        background-position: center center;
+        background-size: cover;
+      }
+      .im9{
+        background-image: url(https://www.cinejosh.com/newsimg/newsmainimg/ravi-teja_b_0412231148.jpg);
+        background-position: center center;
+        background-size: cover;
+      }
+      .m8{
+        border: 1px solid;
+        height: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      .b1 {
+        border: 1px solid transparent;
+        height: 28px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        background-color: rgb(0, 0, 0);
+      }
+      .b12 {
+        height: 20px;
+        float: left;
+        margin-top: 2px;
+        margin-left: 30px;
+        color: #f7f5f5;
+      }
+      .b123 {
+        height: 20px;
+        float: middle;
+        margin-top: 2px;
+        /* margin-left: 30px; */
+        color: #f7f5f5;
+      }
+      .b22 {
+        height: 20px;
+        float: right;
+        margin-top: 2px;
+        margin-right: 30px;
+        color: #f7f5f5;
+      }
+      /* }
+      .itt {
+        height: 200px;
+        width: 200px;
+        background-color: azure;
+      }  */
+    </style>
+</head>
+<body>
+  <center><h2><ion-icon name="logo-instagram"></ion-icon>&emsp;Instagram UI &emsp;<ion-icon name="logo-instagram"></ion-icon></h2></center>
+    <div class="mainn">
+        <div class="m1">
+            <div class="m12">
+              <ion-icon class="m123" name="headset"></ion-icon
+              ><ion-icon class="m123" name="wifi-outline"></ion-icon
+              ><ion-icon name="battery-charging-outline"></ion-icon>
+            </div>
+            <div class="m21">
+              <ion-icon name="airplane"></ion-icon
+              ><ion-icon class="m211" name="notifications-off-circle"></ion-icon>
+            </div>
+        </div>
+        <div class="m2">
+            <ion-icon  name="chevron-back-outline"></ion-icon>
+            <p class="p1" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif; font-size: small;">Ravi Teja &emsp;&emsp;</p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <ion-icon class="i1" name="ellipsis-horizontal"></ion-icon>
+        </div>
+        <div class="m3">
+            <div class="item1"><div class="ci " ></div></div>
+            <div class="item2"><strong><center>99</center></strong></div>
+            <div class="item3"><strong><center>101K</center></strong></div>  
+            <div class="item4"><strong><center>10</center></strong></div>
+            <div class="item5"><b>posts</b></div>
+            <div class="item6"><b>followers</b></div>
+            <div class="item7"><b>following</b></div>
+        </div>
+        <div class="m4">
+            <pre style="float: left; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif; font-size: x-small;">&emsp;<b>Ravi Teja</b>&#128536;
+&#128521;Mr.Perfect&emsp;
+&#128513;&#128516;Smile is my hobby&#128516;
+&#127775;Living life on my on terms&#129311;</pre>
+        </div>
+        <div class="m5">
+            <div style="float: left; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif; font-size: small;" class="itt itt1">&emsp;Follow</div>
+            <div style="float: left; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+                sans-serif; font-size: small;" class="itt itt2">&emsp;Message&emsp;</div>
+            <div style="float: left; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif;" class="itt itt3"> <ion-icon name="person-add-outline"></ion-icon></div>
+        </div>
+        <div class="m61">
+            <div class="it1"><div class="cii"></div></div>
+            <div class="it2"><div class="ci2"></div></div>
+            <div class="it3"><div class="ci3"></div></div>
+            <div class="it4"><div class="ci4"></div></div>
+            <div class="it5"><div class="ci5"></div></div>
+            <div class="it6" style="font-size: xx-small; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif;  ">&emsp;friend</div>
+            <div class="it7" style="font-size: xx-small; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif; ">&emsp;Me</div>
+            <div class="it8" style="font-size: xx-small;  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif; ">&emsp;Hyd</div>
+            <div class="it9" style="font-size: xx-small; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif; ">Graudation</div>
+            <div class="it10" style="font-size: xx-small; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif; ">&emsp;Train</div>
+        </div>
+        <div class="m6">
+            <div class="ff"><ion-icon name="apps-sharp"></ion-icon>&emsp;&emsp;&emsp;&emsp;</div>
+            <div class="ff fff"><svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M3 4.995C3 3.893 3.893 3 4.995 3h14.01C20.107 3 21 3.893 21 4.995v14.01A1.995 1.995 0 0 1 19.005 21H4.995A1.995 1.995 0 0 1 3 19.005V4.995zM5 5v14h14V5H5zm2.972 13.18a9.983 9.983 0 0 1-1.751-.978A6.994 6.994 0 0 1 12.102 14c2.4 0 4.517 1.207 5.778 3.047a9.995 9.995 0 0 1-1.724 1.025A4.993 4.993 0 0 0 12.102 16c-1.715 0-3.23.864-4.13 2.18zM12 13a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7zm0-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path> </g> </g></svg></div>
+        </div>
+        
+        <div class="m7">
+          <div class="ittt im1"></div>
+          <div class="ittt im2"></div>
+          <div class="ittt im3"></div>
+          <div class="ittt im4"></div>
+          <div class="ittt im5"></div>
+          <div class="ittt im6"></div>
+          <div class="ittt im7"></div>
+          <div class="ittt im8"></div>
+          <div class="ittt im9"></div>
+        </div>
+        <div class="m8">
+          <ion-icon name="home-sharp"></ion-icon>&emsp;&emsp;
+          <ion-icon name="search-sharp"></ion-icon>&emsp;&emsp;
+          <ion-icon name="film-sharp"></ion-icon>&emsp;&emsp;
+          <ion-icon name="medkit-sharp"></ion-icon>&emsp;&emsp;
+          <ion-icon name="person-circle-sharp"></ion-icon>
+        </div>
+        <div class="b1">
+          <ion-icon class="b12" name="menu-outline"></ion-icon
+          >&emsp;&emsp;&emsp;&emsp;<ion-icon class="b123" name="home-outline"></ion-icon
+          ><ion-icon class="b22" name="chevron-forward-outline"></ion-icon>
+        </div>
+    </div>
+</body>
+</html>
